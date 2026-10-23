@@ -1,25 +1,25 @@
 class KubeCity < Formula
   desc "A living isometric city of your Kubernetes cluster, in the browser or the terminal"
   homepage "https://github.com/braveadmin/kube-city"
-  version "0.1.1"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.1.1/kube-city-aarch64-apple-darwin.tar.gz"
-      sha256 "92add199e5f42e54bb8b16a5b8ff47086db91218b64b0109fc2bede9bafff63c"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.2.0/kube-city-aarch64-apple-darwin.tar.gz"
+      sha256 "077481678a03e3e6a725aaceab98a27f9fb8a27bada8af6bb2c8244cc20ab66b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.1.1/kube-city-x86_64-apple-darwin.tar.gz"
-      sha256 "15e1ada1582f2028ffec21376b36e36caf2811c2a83fb4e4edde78499c941e38"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.2.0/kube-city-x86_64-apple-darwin.tar.gz"
+      sha256 "d1cc21aaab9e699e3373b04d2a5ef5c476e3825143d33b5222e41570130cb240"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.1.1/kube-city-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5fc27364b720a32cc6e2391b86b7071b2e2061c1e5d57d32005f5ec31fce5d84"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.2.0/kube-city-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "db736bd665c497b7304e3127d8d6b9b4889b080875b52289ad225c933f9d4bc8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.1.1/kube-city-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6099a7b0f512ffa368e9a9958b31d89a3f82d85db34c6fc8f0a1a1425f4a4ce1"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.2.0/kube-city-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "5c5bafafb0c72b4d8f2832009e44991b4f15ba7693906a6af270450a9c241c92"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
