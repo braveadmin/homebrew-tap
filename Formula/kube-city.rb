@@ -1,25 +1,25 @@
 class KubeCity < Formula
-  desc "A living isometric city of your Kubernetes cluster, in the browser or the terminal"
+  desc "A living isometric city of your Kubernetes cluster, in the browser"
   homepage "https://github.com/braveadmin/kube-city"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.3.0/kube-city-aarch64-apple-darwin.tar.gz"
-      sha256 "f6ecfc02f7760b42745f85314be389fbda651aefa08750de7da58591159da715"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-aarch64-apple-darwin.tar.gz"
+      sha256 "9d46d9695c0f17f80d99c955e03a0e4550ec8c8d530b40796b0efdecc3b88f6b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.3.0/kube-city-x86_64-apple-darwin.tar.gz"
-      sha256 "693321bac199515ed6ddea3d78672a39162702d65a17391a284e6d0851d2c68c"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-x86_64-apple-darwin.tar.gz"
+      sha256 "da363ef95ae1f11d74154951f993c757c3c8c72b106bca351a2f9ca7fd63864c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.3.0/kube-city-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "99a25c1725143ca24649c442dda5eb56d7bad1b86f07f37696ff8685aca40c7f"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0467d93bf0090144039761304db24fcefaf23e3dec716b8b88a7eb685f9e98ed"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.3.0/kube-city-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "18b16420724d9ccd4eea7062205683819cf790b0d2dd320c74e758f969e71bd0"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "e5c1ed380a8fc4bf3f17779cb84399369f69f2d551285b65ed3ef5323ab6b3cf"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
