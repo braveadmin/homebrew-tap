@@ -1,33 +1,21 @@
 class KubeCity < Formula
   desc "A living isometric city of your Kubernetes cluster, in the browser"
   homepage "https://github.com/braveadmin/kube-city"
-  version "0.4.0"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-aarch64-apple-darwin.tar.gz"
-      sha256 "9d46d9695c0f17f80d99c955e03a0e4550ec8c8d530b40796b0efdecc3b88f6b"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-x86_64-apple-darwin.tar.gz"
-      sha256 "da363ef95ae1f11d74154951f993c757c3c8c72b106bca351a2f9ca7fd63864c"
-    end
-  end
+  version "0.5.0"
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0467d93bf0090144039761304db24fcefaf23e3dec716b8b88a7eb685f9e98ed"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.5.0/kube-city-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "d59556e75e2e3aae477667d5fe1a1c3c93f60299c19e7d1bad07af79f909a7e4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.4.0/kube-city-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "e5c1ed380a8fc4bf3f17779cb84399369f69f2d551285b65ed3ef5323ab6b3cf"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.5.0/kube-city-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "2c4e0cff546316ac02a5c7877b83f7354d50ff13679408de22efae5f9c8259f3"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":              {},
     "aarch64-unknown-linux-gnu":         {},
-    "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
     "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
@@ -50,12 +38,6 @@ class KubeCity < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "kube-city"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "kube-city"
-    end
     if OS.linux? && Hardware::CPU.arm?
       bin.install "kube-city"
     end
