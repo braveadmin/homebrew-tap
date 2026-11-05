@@ -1,15 +1,15 @@
 class KubeCity < Formula
   desc "A living isometric city of your Kubernetes cluster, in the browser"
   homepage "https://github.com/braveadmin/kube-city"
-  version "0.5.0"
+  version "0.6.0"
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.5.0/kube-city-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "d59556e75e2e3aae477667d5fe1a1c3c93f60299c19e7d1bad07af79f909a7e4"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.6.0/kube-city-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b3ae4fa65c5fac92530bcf46b30b7507162b9ab76c25f6b51cf990d8b7a1aa12"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/braveadmin/kube-city/releases/download/v0.5.0/kube-city-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "2c4e0cff546316ac02a5c7877b83f7354d50ff13679408de22efae5f9c8259f3"
+      url "https://github.com/braveadmin/kube-city/releases/download/v0.6.0/kube-city-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "bd8686ff5978f8358601df22da19e5cc6285feb99f2c652184880650be78dab9"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
